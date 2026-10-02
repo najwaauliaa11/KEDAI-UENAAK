@@ -1,0 +1,544 @@
+body {
+    font-family: Verdana, Arial, sans-serif;
+    color: #333333;
+    background-color: #FFFDF4;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #3E622D;
+}
+
+h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 23px;
+}
+
+.subjudul {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    color: #8B623D;
+}
+
+a:link,
+a:visited {
+    color: #3E622D;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #D98300;
+}
+
+body:not(.halaman-menu):not(.halaman-judul) {
+    animation: muncul 0.6s;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.halaman-judul {
+    margin: 0;
+    background-color: #3C652A;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.halaman-menu {
+    margin: 0;
+    background-color: #FFD95A;
+    color: #3E622D;
+}
+
+.menu {
+    margin: 10px;
+    padding: 0;
+    border-radius: 10px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu a {
+    display: block;
+    padding: 12px;
+}
+
+.menu:hover {
+    background-color: #3E622D;
+    transform: translateX(3px);
+}
+
+.menu:hover a {
+    color: white;
+}
+
+.tabel-favorit {
+    width: 85%;
+    table-layout: fixed;
+}
+
+.tabel-makanan {
+    width: 95%;
+    table-layout: fixed;
+}
+
+.tabel-favorit td,
+.tabel-makanan td {
+    background-color: #FFF1C6;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px #E5DCC5;
+    animation: muncul 0.6s backwards;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.tabel-favorit td {
+    width: 33%;
+}
+
+.tabel-makanan td {
+    width: 20%;
+}
+
+.tabel-favorit td:nth-child(2),
+.tabel-makanan td:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.tabel-favorit td:nth-child(3),
+.tabel-makanan td:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.tabel-makanan td:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.tabel-makanan td:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.tabel-favorit td:hover,
+.tabel-makanan td:hover {
+    background-color: #FFF8E4;
+    transform: translateY(-6px);
+}
+
+.foto {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.tabel-favorit .foto {
+    height: 170px;
+}
+
+.tabel-favorit td:hover .foto,
+.tabel-makanan td:hover .foto {
+    transform: scale(1.03);
+}
+
+.tabel-favorit h3 {
+    font-size: 19px;
+    min-height: 45px;
+}
+
+.tabel-makanan h3 {
+    font-size: 17px;
+    min-height: 45px;
+}
+
+.deskripsi {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12px;
+    color: #777777;
+    line-height: 1.5;
+    min-height: 80px;
+}
+
+.harga,
+.harga-kanan {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #C87712;
+}
+
+.harga-kanan {
+    float: right;
+}
+
+.tabel-minuman {
+    width: 85%;
+}
+
+.tabel-minuman td {
+    width: 50%;
+    background-color: #F8E8A6;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tabel-minuman td:hover {
+    background-color: #FFD95A;
+    transform: translateY(-3px);
+}
+
+.tombol,
+.tombol-pesanan,
+.tombol-ulang,
+.tombol-reset {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tombol {
+    display: inline-block;
+    padding: 10px 16px;
+    border: none;
+    background-color: #3E622D;
+    color: white;
+}
+
+a.tombol:link,
+a.tombol:visited {
+    color: white;
+}
+
+.tombol-pesanan,
+.tombol-ulang {
+    padding: 11px 16px;
+    margin: 5px 5px 5px 0;
+}
+
+.tombol-pesanan {
+    background-color: #3E622D;
+    color: white;
+    border: 1px solid #3E622D;
+}
+
+.tombol-ulang {
+    background-color: white;
+    color: #3E622D;
+    border: 1px solid #3E622D;
+}
+
+.tombol-reset {
+    padding: 10px 16px;
+    margin-top: 5px;
+    border: 1px solid #3E622D;
+    background-color: white;
+    color: #3E622D;
+}
+
+.tombol:hover,
+.tombol-pesanan:hover {
+    background-color: #D98300;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.tombol-ulang:hover,
+.tombol-reset:hover {
+    background-color: #EEF4E8;
+    transform: translateY(-3px);
+}
+
+.tombol:active,
+.tombol-pesanan:active,
+.tombol-ulang:active,
+.tombol-reset:active {
+    transform: scale(0.97);
+}
+
+.kotak,
+.kotak-pesanan {
+    margin: 25px auto;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: #FFF1C6;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px #E5DCC5;
+}
+
+.kotak {
+    width: 85%;
+    max-width: 800px;
+}
+
+.kotak-pesanan {
+    width: 95%;
+    max-width: 850px;
+}
+
+.kotak input[type="text"],
+.kotak input[type="tel"],
+.kotak select,
+.kotak textarea,
+.kotak-pesanan input[type="text"],
+.kotak-pesanan input[type="tel"],
+.kotak-pesanan select,
+.kotak-pesanan textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #C8B66E;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 14px;
+    color: #333333;
+    background-color: white;
+}
+
+.kotak textarea,
+.kotak-pesanan textarea {
+    resize: vertical;
+}
+
+.kotak-pesanan input:focus,
+.kotak-pesanan select:focus,
+.kotak-pesanan textarea:focus {
+    outline: 2px solid #3E622D;
+    outline-offset: 2px;
+}
+
+.tabel-form {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabel-form td,
+.tabel-form th {
+    padding: 10px;
+    border-bottom: 1px solid #D7C77E;
+}
+
+.tabel-form td:last-child {
+    width: 80px;
+}
+
+.tabel-form input[type="number"] {
+    width: 70px;
+    padding: 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.bagian-pesanan {
+    padding: 20px 10px;
+}
+
+.bagian-pesanan h1 {
+    text-align: center;
+}
+
+.bagian-pesanan h2 {
+    margin-top: 25px;
+}
+
+.bagian-pesanan .subjudul {
+    text-align: center;
+}
+
+.kotak-pesanan label {
+    display: block;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.petunjuk,
+.keterangan {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.tabel-pesanan {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabel-pesanan th {
+    padding: 12px 8px;
+    background-color: #3E622D;
+    color: white;
+    text-align: left;
+}
+
+.tabel-pesanan td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #D9C77F;
+    line-height: 1.5;
+}
+
+.tabel-pesanan tr:nth-child(even) {
+    background-color: #FFF6D6;
+}
+
+.tabel-pesanan th:nth-child(2),
+.tabel-pesanan td:nth-child(2) {
+    width: 100px;
+    white-space: nowrap;
+}
+
+.tabel-pesanan th:last-child,
+.tabel-pesanan td:last-child {
+    width: 75px;
+    text-align: center;
+}
+
+.tabel-pesanan small {
+    color: #777777;
+    font-size: 12px;
+}
+
+.tabel-pesanan input[type="number"] {
+    width: 65px;
+    padding: 8px;
+    text-align: center;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 14px;
+    border: 1px solid #C8B66E;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.baris-tombol {
+    margin-top: 20px;
+}
+
+#bagianAlamat:not([hidden]),
+#pembayaran:not([hidden]),
+#formPesanan:not([hidden]) {
+    animation: muncul 0.5s;
+}
+
+#bagianAlamat {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #FFFDF4;
+    border-left: 4px solid #3E622D;
+    border-radius: 8px;
+}
+
+#ringkasan p {
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.bagian-pesanan .total-pesanan {
+    color: #C87712;
+    background-color: #FFFDF4;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.foto-qr {
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.kotak-pesanan hr {
+    border: none;
+    border-top: 1px solid #D9C77F;
+    margin: 25px 0;
+}
+
+.kartu-pesanan {
+    background-color: #FFFDF4;
+    border: 1px solid #D9C77F;
+    border-left: 5px solid #3E622D;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+    animation: muncul 0.5s;
+}
+
+.kartu-pesanan h3 {
+    margin-top: 0;
+}
+
+.kartu-pesanan p {
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 500px) {
+    h1,
+    .bagian-pesanan h1 {
+        font-size: 24px;
+    }
+
+    .menu {
+        font-size: 13px;
+    }
+
+    .kotak-pesanan {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .tabel-pesanan th,
+    .tabel-pesanan td {
+        padding: 10px 4px;
+        font-size: 12px;
+    }
+
+    .tabel-pesanan th:nth-child(2),
+    .tabel-pesanan td:nth-child(2) {
+        width: 75px;
+    }
+
+    .tabel-pesanan input[type="number"] {
+        width: 55px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

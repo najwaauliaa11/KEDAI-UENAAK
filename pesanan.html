@@ -1,0 +1,390 @@
+<html>
+<head>
+    <title>Pesanan Kedai Uenaak</title>
+
+    <link rel="stylesheet"
+          href="css_uts.css"
+          type="text/css">
+</head>
+
+<body>
+
+<div class="bagian-pesanan">
+
+    <h1>PESANAN KEDAI UENAAK</h1>
+
+    <p class="subjudul">
+        Pilih makanan dan minuman yang kamu inginkan.
+    </p>
+
+    <form id="formPesanan"
+          class="kotak-pesanan"
+          onsubmit="buatPesanan(); return false;">
+
+        <h2>DATA PEMESAN</h2>
+
+        <label for="nama">Nama pemesan</label>
+        <input type="text"
+               id="nama"
+               placeholder="Masukkan nama"
+               required>
+
+        <label for="telepon">Nomor telepon</label>
+        <input type="tel"
+               id="telepon"
+               placeholder="Masukkan nomor telepon"
+               required>
+
+        <h2>PILIH MAKANAN</h2>
+
+        <p class="petunjuk">
+            Isi jumlah menu yang ingin dipesan.
+            Biarkan 0 untuk menu yang tidak dipilih.
+        </p>
+
+        <table class="tabel-pesanan">
+            <tr>
+                <th>Makanan</th>
+                <th>Harga</th>
+                <th>Jumlah</th>
+            </tr>
+
+            <tr>
+                <td>
+                    Nasi Sayur Lodeh
+                    <br>
+                    <small>
+                        Nasi, telur, sayur lodeh,
+                        satu tahu goreng dan satu tempe mendoan.
+                    </small>
+                </td>
+                <td>Rp10.000</td>
+                <td>
+                    <input type="number" id="jumlah0"
+                           aria-label="Jumlah Nasi Sayur Lodeh"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Nasi Ayam Geprek
+				<br>
+				<small>
+					Nasi dengan ayam geprek, sambal.
+                </small>
+				</td>
+                <td>Rp10.000</td>
+                <td>
+                    <input type="number" id="jumlah1"
+                           aria-label="Jumlah Nasi Ayam Geprek"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Nasi Goreng Telur
+				<br>
+				<small>
+					Nasi goreng dengan telur ceplol.
+                </small>
+				</td>
+                <td>Rp10.000</td>
+                <td>
+                    <input type="number" id="jumlah2"
+                           aria-label="Jumlah Nasi Goreng Telur"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Indomie Rebus Telur + Teh Es
+				<br>
+				<small>
+					Indomie kuah dengan telur + teh es.</small>
+					</td>
+                <td>Rp10.000</td>
+                <td>
+                    <input type="number" id="jumlah3"
+                           aria-label="Jumlah Indomie Rebus"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Indomie Goreng Telur + Teh Es
+				<br>
+				<small> Indomie goreng dengan telur + teh es. </small>
+				</td>
+                <td>Rp10.000</td>
+                <td>
+                    <input type="number" id="jumlah4"
+                           aria-label="Jumlah Indomie Goreng"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Rice Bowl Ayam Suwir Kemangi
+				<br>
+				<small>Nasi dengan ayam suwir kemangi, nugget/telur dadar dan mie.</small>
+				</td>
+                <td>Rp10.000</td>
+                <td>
+                    <input type="number" id="jumlah5"
+                           aria-label="Jumlah Ayam Suwir Kemangi"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Rice Bowl Tongkol Suwir
+				<br>
+				<small>Nasi dengan tongkol suwir, telur dadar/nugget dan mie.</small>
+				</td>
+                <td>Rp10.000</td>
+                <td>
+                    <input type="number" id="jumlah6"
+                           aria-label="Jumlah Tongkol Suwir"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Rice Bowl Ayam Teriyaki
+				<br>
+				<small>Nasi dengan ayam teriyaki, telur dadar/nugget dan mie.</small>
+				</td>
+                <td>Rp10.000</td>
+                <td>
+                    <input type="number" id="jumlah7"
+                           aria-label="Jumlah Ayam Teriyaki"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Soto Ayam + Telur + Teh Es
+				<br>
+				<small>Soto ayam dengan telur rebus + tes es</small>
+				</td>
+                <td>Rp10.000</td>
+                <td>
+                    <input type="number" id="jumlah8"
+                           aria-label="Jumlah Soto Ayam"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Rice Bowl Bakso Sapi Sambalado
+				<br>
+				<small>Nasi dengan ayam teriyaki, telur dadar/nugget dan mie.</small>
+				</td>
+                <td>Rp10.000</td>
+                <td>
+                    <input type="number" id="jumlah9"
+                           aria-label="Jumlah Bakso Sapi Sambalado"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+        </table>
+
+        <h2>PILIH MINUMAN</h2>
+
+        <table class="tabel-pesanan">
+            <tr>
+                <th>Minuman</th>
+                <th>Harga</th>
+                <th>Jumlah</th>
+            </tr>
+
+            <tr>
+                <td>Kopi</td>
+                <td>Rp6.000</td>
+                <td>
+                    <input type="number" id="jumlah10"
+                           aria-label="Jumlah Kopi"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Kopi Susu</td>
+                <td>Rp8.000</td>
+                <td>
+                    <input type="number" id="jumlah11"
+                           aria-label="Jumlah Kopi Susu"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Milo</td>
+                <td>Rp6.000</td>
+                <td>
+                    <input type="number" id="jumlah12"
+                           aria-label="Jumlah Milo"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Es Teh Jumbo</td>
+                <td>Rp3.000</td>
+                <td>
+                    <input type="number" id="jumlah13"
+                           aria-label="Jumlah Es Teh Jumbo"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Es Jeruk Kecil</td>
+                <td>Rp4.000</td>
+                <td>
+                    <input type="number" id="jumlah14"
+                           aria-label="Jumlah Es Jeruk Kecil"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Es Jeruk Besar</td>
+                <td>Rp5.000</td>
+                <td>
+                    <input type="number" id="jumlah15"
+                           aria-label="Jumlah Es Jeruk Besar"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mineral Botol</td>
+                <td>Rp4.000</td>
+                <td>
+                    <input type="number" id="jumlah16"
+                           aria-label="Jumlah Mineral Botol"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Air Putih Es</td>
+                <td>Rp2.000</td>
+                <td>
+                    <input type="number" id="jumlah17"
+                           aria-label="Jumlah Air Putih Es"
+                           min="0" step="1" value="0" required>
+                </td>
+            </tr>
+        </table>
+
+        <h2>KETERANGAN PESANAN</h2>
+
+        <label for="jenis">Jenis pesanan</label>
+
+        <select id="jenis" onchange="pilihJenisPesanan()">
+            <option value="Makan di tempat">
+                Makan di tempat
+            </option>
+
+            <option value="Bungkus">
+                Bungkus
+            </option>
+
+            <option value="Diantar">
+                Diantar
+            </option>
+        </select>
+
+        <div id="bagianAlamat" hidden>
+            <label for="alamat">Alamat pengantaran</label>
+
+            <textarea id="alamat"
+                      rows="3"
+                      placeholder="Nama jalan, nomor rumah, dan patokan"></textarea>
+
+            <p class="petunjuk">
+                Ongkos antar belum termasuk dalam total.
+                Konfirmasikan ongkos antar kepada kedai.
+            </p>
+        </div>
+
+        <label for="catatan">Catatan tambahan</label>
+
+        <textarea id="catatan"
+                  rows="3"
+                  placeholder="Contoh: tidak pedas, es sedikit"></textarea>
+
+        <div class="baris-tombol">
+            <button type="submit" class="tombol-pesanan">
+                LANJUT KE PEMBAYARAN
+            </button>
+
+            <button type="button"
+                    class="tombol-ulang"
+                    onclick="hapusIsian()">
+                HAPUS ISIAN
+            </button>
+        </div>
+
+    </form>
+
+    <div id="pembayaran" class="kotak-pesanan" hidden>
+
+        <h2>RINGKASAN PESANAN</h2>
+
+        <div id="ringkasan"></div>
+
+        <h2 id="totalPembayaran" class="total-pesanan"></h2>
+
+        <hr>
+
+        <h2>PEMBAYARAN QR</h2>
+
+        <p>
+            Scan QR berikut dan bayar sesuai total pesanan.
+        </p>
+
+        <img src="foto makanan/qrpembayaran.jpeg"
+             alt="QR pembayaran Kedai Uenaak"
+             class="foto-qr">
+
+        <p class="petunjuk">
+            Periksa nama penerima dan nominal sebelum membayar.
+        </p>
+
+        <div class="baris-tombol">
+            <button type="button"
+                    class="tombol-pesanan"
+                    onclick="konfirmasiPembayaran()">
+                SAYA SUDAH MEMBAYAR
+            </button>
+
+            <button type="button"
+                    class="tombol-ulang"
+                    onclick="ubahPesanan()">
+                UBAH PESANAN
+            </button>
+        </div>
+
+    </div>
+
+    <div class="kotak-pesanan">
+
+        <h2>DAFTAR PESANAN</h2>
+
+        <p class="petunjuk">
+            Konfirmasi pembayaran menunggu pemeriksaan kedai.
+        </p>
+
+        <div id="daftarPesanan"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
